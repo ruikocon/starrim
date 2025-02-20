@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>群星边际wiki</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Bootstrap 的 CSS 文件 -->
+  <!--link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet"!-->
+<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"!-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script!-->
+<!--script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script!-->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+  <!--jquery !-->
+  <!--script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script!-->
+ <script src="js/jquery.min.js"></script>
+
+
+  <!-- pushy侧边栏菜单插件 !-->
+  <!--link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/pushy/1.3.0/css/pushy.min.css"!-->
+  <link rel="stylesheet" href="css/pushy.min.css">
+
+  <!-- scrollup 回到顶部功能 !-->
+  <!--script src="https://cdn.bootcdn.net/ajax/libs/scrollup/2.4.1/jquery.scrollUp.min.js"></script!-->
+  <script src="js/jquery.scrollUp.min.js"></script>
+
+
+  <style type="text/css">
+  	body
+    {
+font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu
+    }
+
+        /* scrollUp的模板 圆形向上箭头*/
+    #scrollUp{bottom:20px;right:20px;width:38px;height:38px;background:url(https://s3.ax1x.com/2020/11/21/DlyvqI.png) no-repeat}
+
+    a.nav-link
+    {
+      color: white;
+    }
+    a.nav-link:hover
+    {
+      color: white;
+    }
+    a.nav-link.active
+    {
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<!-- body 加上一条 onhashchange 目的是解决导航栏 fixed-top 后，锚点定位时遮挡问题 参见https://www.cnblogs.com/santiego/p/10361494.html !-->
+<body style="background: #fcfaf9;" onhashchange="fix_the_nav();">
+
+
+	 <!--  list-unstyled 去掉bootstrap li列表前方的小圆点 !-->
+  <!-- Navigation -->
+  <!--nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container" style="padding-left: 30px; ">
+        <div class="row">
+          <span style="color:white;font-size: 21px;">群星边际 WIKI</span>
+  </div>
+<button class="menu-btn btn" style="float: right;color: white;font-size: 23px;">&#9776;&nbsp;&nbsp;</button>
+    </div>
+  </nav>
+
+       <nav class="pushy pushy-left">
+            <div class="pushy-content">
+
+    <ul class="list-unstyled">
+<li class="pushy-link"><a href="#info">简介</a></li>
+</ul>
+</div>
+</nav !-->
+
+
+
+
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <!--img src="img/logo.png" width="40" height="32"/!-->
+        <!--svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+  <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+</svg!-->
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+          <li>
+            <a class="nav-link px-2 active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" role="tab" aria-controls="info" style="cursor: pointer;">简介</a>
+          </li>
+          <li>
+            <a class="nav-link px-2" id="level-tab" data-bs-toggle="tab" data-bs-target="#level" role="tab" aria-controls="level" style="cursor: pointer">难度</a>
+          </li>
+
+          <li>
+            <a class="nav-link px-2" id="star-tab" data-bs-toggle="tab" data-bs-target="#star" role="tab" aria-controls="star" style="cursor: pointer">星球</a>
+          </li>
+
+          <li>
+            <a class="nav-link px-2" id="source-tab" data-bs-toggle="tab" data-bs-target="#source" role="tab" aria-controls="source" style="cursor: pointer">起源</a>
+          </li>
+          <li>
+            <a class="nav-link px-2" id="enemy-tab" data-bs-toggle="tab" data-bs-target="#enemy" role="tab" aria-controls="enemy" style="cursor: pointer">敌人</a>
+          </li>
+          <li>
+            <a class="nav-link px-2" id="update-tab" data-bs-toggle="tab" data-bs-target="#update" role="tab" aria-controls="update" style="cursor: pointer">更新记录</a>
+          </li>
+          <li>
+            <a class="nav-link px-2" href="https://sc2arcade.com/map/5/111423/player-base?orderBy=lobbiesStarted&orderDirection=desc&limit=100" style="cursor: pointer">玩家数据</a>
+          </li>
+          <li>
+            <a href="http://124.71.210.179/bbs" class="nav-link px-2" style="cursor: pointer">讨论区</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+
+<div class="container"><!---container!-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="bog1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">幽魂 - 纳克斯</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<div class="col text-center">
+  <img src="img/gift/bog1a.jpg" class="img-fluid">
+</div>
+<div class="col text-center">
+  <img src="img/gift/bog1b.jpg" class="img-fluid">
+  <img src="img/gift/bog1c.jpg" class="img-fluid">
+  <img src="img/gift/bog1d.jpg" class="img-fluid">
+</div>
+<br>
+<div class="col text-center">
+  <img src="img/gift/bog1e.jpg" class="img-fluid">
+  <img src="img/gift/bog1f.jpg" class="img-fluid">
+</div>
+<br>
+
+<div class="col text-center">
+  <img src="img/gift/bog1g.jpg" class="img-fluid">
+  <img src="img/gift/bog1h.jpg" class="img-fluid">
+</div>
+<br>
+
+<div class="col text-center">
+  <img src="img/gift/bog1i.jpg" class="img-fluid">
+  <img src="img/gift/bog1j.jpg" class="img-fluid">
+</div>
+<br>
+<div class="col text-center">
+  <img src="img/gift/bog1k.jpg" class="img-fluid">
+  <img src="img/gift/bog1l.jpg" class="img-fluid">
+  <img src="img/gift/bog1q.jpg" class="img-fluid">
+</div>
+<br>
+
+<div class="col text-center">
+  <img src="img/gift/bog1m.jpg" class="img-fluid">
+</div>
+<br>
+<div class="col text-center">
+  <img src="img/gift/bog1o.jpg" class="img-fluid">
+</div>
+<div class="col text-center">
+  <img src="img/gift/bog1n.jpg" class="img-fluid">
+  <img src="img/gift/bog1p.jpg" class="img-fluid">
+</div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="enemy_za" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">利维坦</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/enemy/za2.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/enemy/za3.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/za4.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/za5.jpg" class="img-fluid">
+  </div>
+<br>
+    <div class="col text-center"> 
+    <img src="img/enemy/za6.jpg" class="img-fluid">
+  </div>
+<br>
+    <div class="col text-center"> 
+    <img src="img/enemy/za7.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/za8.jpg" class="img-fluid">
+  </div>
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="enemy_zb" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">虫巢保卫者</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/enemy/zb2.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/enemy/zb3.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zb4.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zb5.jpg" class="img-fluid">
+  </div>
+<br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zb6.jpg" class="img-fluid">
+  </div>
+<br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zb7.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="enemy_zc" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">吞噬者</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/enemy/zc2.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/enemy/zc3.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zc4.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zc5.jpg" class="img-fluid">
+  </div>
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="enemy_zd" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">守护者</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/enemy/zd2.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/enemy/zd3.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zd4.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zd5.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zd6.jpg" class="img-fluid">
+  </div>
+    <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zd7.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/zd8.jpg" class="img-fluid">
+  </div>
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="enemy_ze" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">异龙</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/enemy/ze2.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/enemy/ze3.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/ze4.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/ze5.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/ze6.jpg" class="img-fluid">
+  </div>
+    <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/ze7.jpg" class="img-fluid">
+  </div>
+  <br>
+    <div class="col text-center"> 
+    <img src="img/enemy/ze8.jpg" class="img-fluid">
+  </div>
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="fire2_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">熔岩结晶</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<div class="alert alert-primary" role="alert">
+可以使用农民等单位拾取
+</div>
+  <div class="col text-center"> 
+    <img src="img/gift/fire2a.jpg" class="img-fluid">
+    <img src="img/gift/fire2b.jpg" class="img-fluid">
+    <img src="img/gift/fire2c.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ice1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">冰霜之灵</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/gift/ice1a.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sea1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">远洋贸易</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/gift/sea1a.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/gift/sea1b.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sea2_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">太空城</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/gift/sea2a.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/gift/sea2b.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="sad1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">沙漠之子</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <div class="col text-center">
+    <img src="img/gift/sad1a.jpg" class="img-fluid">
+  </div>
+
+  <div class="col text-center">
+    <img src="img/gift/sad1b.jpg" class="img-fluid">
+  </div>
+
+    <div class="col text-center">
+    <img src="img/gift/sad1c.jpg" class="img-fluid">
+  </div>
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sad2_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">智能天雷</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<div class="alert alert-primary" role="alert">
+一次性的智能战机存活时间为10秒
+</div>
+
+
+  <div class="col text-center">
+    <img src="img/gift/sad2a.jpg" class="img-fluid">
+  </div>
+
+  <div class="col text-center">
+    <img src="img/gift/sad2b.jpg" class="img-fluid">
+  </div>
+
+    <div class="col text-center">
+    <img src="img/gift/sad2c.jpg" class="img-fluid">
+  </div>
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="hill1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">战狼</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/gift/hill1a.jpg" class="img-fluid">
+  </div>
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill1b.jpg" class="img-fluid">
+  </div>
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill1c.jpg" class="img-fluid">
+  </div>
+
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill1d.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill1e.jpg" class="img-fluid">
+  </div>
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="hill2_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">轨道导弹塔</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <div class="col text-center"> 
+    <img src="img/gift/hill2a.jpg" class="img-fluid">
+  </div>
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill2b.jpg" class="img-fluid">
+  </div>
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/hill2c.jpg" class="img-fluid">
+  </div>
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="bog2_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">资源转换</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<div class="alert alert-danger" role="alert">
+注意：会收取25%的手续费!
+</div>
+  <div class="col text-center"> 
+    <img src="img/gift/bog2a.jpg" class="img-fluid">
+  </div>
+<br>
+  <div class="col text-center"> 
+    <img src="img/gift/bog2b.jpg" class="img-fluid">
+  </div>
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+                <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ghost1_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">行星发动机</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <div class="col text-center">
+    <img src="img/gift/ghost1a.jpg" class="img-fluid">
+  </div>
+<br>
+
+  <div class="col text-center">
+    <img src="img/gift/ghost1b.jpg" class="img-fluid">
+  </div>
+  <br>
+
+  <div class="col text-center">
+    <img src="img/gift/ghost1c.jpg" class="img-fluid">
+    <img src="img/gift/ghost1d.jpg" class="img-fluid">
+    <img src="img/gift/ghost1e.jpg" class="img-fluid">
+  </div>
+
+
+
+      </div>
+      <div class="modal-footer" style="text-align:center;display: block;">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-dismiss="modal" >关闭</button>
+      </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="tab-content" id="myTabContent"><!--tab-content start!-->
+
+
+
+
+
+  <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+  	<br>
+<div class="alert alert-primary" role="alert">
+群星边际是星际争霸2游戏大厅的一张地图，玩家选择一方势力经历从星球割据到统一星球再到星际殖民的过程，与其他玩家共同对抗虫群和星灵，取得最终胜利。<br>
+QQ群：881735228
+</div>
+
+
+
+
+<div class="alert alert-danger" role="alert">
+本图难度较大，建议新手不熟悉流程时不要贸然尝试普通和更难的难度，以免有挫折感。<br>
+第一次玩，建议先自己开一局，首先选择新手教程，走一下地面流程。<br><br>
+  <div class="col text-center">
+    <img src="img/intro/intro1.jpg" class="img-fluid">
+  </div>
+  <br>
+然后可以尝试新手模式，在低难度下对抗电脑<br><br>
+  <div class="col text-center">
+    <img src="img/intro/intro2.jpg" class="img-fluid">
+  </div>
+</div>
+<br>
+
+<h4>游戏分成两种模式：虫群天灾和净化协议</h4>
+<hr>
+<br>
+<div class="card">
+  <div class="card-header">
+    <h4>虫群天灾</h4>
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+    <img src="img/intro/intro2.jpg" class="img-fluid">
+  </div>
+  <br>
+        <div class="col text-center">
+    <img src="img/intro/intro3.jpg" class="img-fluid">
+  </div>
+<br>
+本模式支持2-6人（新手模式1-3人），玩家从8个星球中选取自己所属星球进行发展。<br>
+虫群会从8个星球中选取若干主要目标和次要目标，普通难度为1主要目标，2次要目标，困难和残酷难度为2主要目标，2次要目标<br>
+游戏会给玩家17分钟的发展时间（残酷难度下，8分钟时会有一波只有小狗的空投），之后会分别对选为目标的星球进行三次无法拦截的空投。之后出现一波分支舰队，对所有星球进行进攻。<br>
+最终会有一只虫群主舰队出现，舰队内包含1-2只利维坦。（普通难度1只，困难和残酷2只）。<br>
+击败所有舰队并消灭所有星球上的虫群即获得胜利。
+<br>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    <h4>净化协议</h4>
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+    <img src="img/intro/intro4.jpg" class="img-fluid">
+  </div>
+<br>
+本模式支持2-4人。<br>
+虫群的行为模式与虫群天灾流程大体类似，但加入了第三方势力星灵，星灵会与虫群交战，优先净化被虫群占领的星球，并占领1-2颗星球作为自己的基地（普通难度为1颗，困难和残酷为2颗），如果所有星球上的虫群都被消灭，则会选择玩家所在星球进行净化。<br>
+在虫群最终舰队出现时，星灵会与虫群主舰队进行交战，击败虫群之后，会出现一艘星灵母舰净化号，它将会随机选择星球进行毁灭，直到摧毁所有星球。<br>
+净化号拥有护盾，无法被直接攻击。玩家需消灭星灵母星上的所有星灵枢纽来破坏净化号的护盾并攻击净化号，在净化号毁灭所有星球之前击败净化号即可获得胜利<br>
+<br>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <div class="card-body">
+
+
+    <a href="https://www.bilibili.com/video/BV1Aw411d7Qb">群星边际教学入门</a>
+    <br>
+    作者：突袭巡洋舰
+  </div>
+</div>
+
+<br>
+<div class="card">
+  <div class="card-body">
+    <a href="https://www.bilibili.com/video/BV1Mf4y1K72Y?p=1">所有星球割据开局统一流程</a>
+    <br>
+    作者：突袭无量舰
+  </div>
+</div>
+
+<br>
+<div class="card">
+  <div class="card-body">
+    <a href="https://www.bilibili.com/video/BV1QS4y1X71q">群星边际新版残酷单刷</a>
+    <br>
+    作者：霜绒之雪
+  </div>
+</div>
+
+
+<br>
+<div class="card">
+  <div class="card-body">
+    <a href="https://www.bilibili.com/video/BV1d3411k7AN">群星边际-净化协议残酷参考式录像合集</a>
+    <br>
+    作者：霜绒之雪
+  </div>
+</div>
+
+
+
+
+<br>
+<div class="card">
+  <div class="card-body">
+    <a href="https://www.bilibili.com/video/BV1aL411t7bm">群星边际 8分半病毒速推，统一星球</a>
+    <br>
+    作者：Whispire
+  </div>
+</div>
+
+<br>
+
+
+  </div>
+
+
+
+
+<div class="tab-pane fade" id="star" role="tabpanel" aria-labelledby="star-tab">
+
+    <br>
+    <div class="alert alert-primary" role="alert">
+玩家可以选择盖亚之外的星球作为起始星球<br>
+</div>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    星球资源
+  </div>
+  <div class="card-body">
+<div class="alert alert-info" role="alert">
+瓦斯矿储量 5000  &emsp;高产瓦斯矿储量 10000<br>
+晶体矿储量 10000  &emsp;高产晶体矿储量 20000<br>
+<br>
+指挥中心 价格 400晶体  补给 16<br>
+城市 价格 200晶体 补给 10<br>
+</div>
+
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">星球名称</th>
+      <th scope="col">矿位数量</th>
+      <th scope="col">总计储量</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>盖亚</td>
+      <td>8矿  8气(4高产矿，4高产气)</td>
+      <td>12万矿 6万气</td>
+    </tr>
+
+
+    <tr>
+      <td>多山</td>
+      <td>7矿  6气</td>
+      <td>7万矿 3万气</td>
+    </tr>
+    <tr>
+      <td>沙漠</td>
+      <td>7矿  6气</td>
+      <td>7万矿 3万气</td>
+    </tr>
+    <tr>
+      <td>海洋</td>
+      <td>7矿  4气(2高产气)</td>
+      <td>7万矿 3万气</td>
+    </tr>
+    <tr>
+      <td>熔岩</td>
+      <td>7矿  3气(1高产矿，1高产气)</td>
+      <td>8万矿 2万气</td>
+    </tr>
+
+
+    <tr>
+      <td>冰霜</td>
+      <td>5矿  6气</td>
+      <td>5万矿 3万气</td>
+    </tr>
+
+    <tr>
+      <td>沼泽</td>
+      <td>5矿  6气</td>
+      <td>5万矿 3万气</td>
+    </tr>
+
+    <tr>
+      <td>丛林</td>
+      <td>5矿  4气</td>
+      <td>5万矿 2万气</td>
+    </tr>
+
+    <tr>
+      <td>幽灵</td>
+      <td>4矿  4气</td>
+      <td>4万矿 2万气</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div><!--card end!-->
+<br>
+
+
+<div class="card">
+  <div class="card-header">
+地面资源采集速度&nbsp;-&nbsp;数据来自安达利尔
+  </div>
+  <div class="card-body">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">矿种</th>
+      <th scope="col">采集方式</th>
+      <th scope="col">每分产量</th>
+      <th scope="col">每秒产量</th> 
+      <!--th scope="col">说明</th!-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>矿</td>
+      <td>自动</td>
+      <td>300</td>
+      <td>5</td>
+      <!--td></td!-->
+    </tr>
+    <tr>
+      <td>高产矿</td>
+      <td>自动</td>
+      <td>300</td>
+      <td>5</td>
+      <!--td>和普通的一样</td!-->
+    </tr>
+    <tr>
+      <td>矿</td>
+      <td>农民</td>
+      <td>233</td>
+      <td>3.8</td>
+      <!--td>每次采8，每分钟29-30次</td!-->
+    </tr>
+    <tr>
+      <td>高产矿</td>
+      <td>农民</td>
+      <td>315</td>
+      <td>5.25</td>
+      <!--td>每次采15，每分钟21-22次</td!-->
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+      <td>气</td>
+      <td>自动</td>
+      <td>180</td>
+      <td>3</td>
+      <!--td>每分钟略微低于180，按180计算显示4点，实际6点每秒</td!-->
+    </tr>
+
+    <tr>
+      <td>高产气</td>
+      <td>自动</td>
+      <td>180</td>
+      <td>3</td>
+      <!--td>和普通的一样</td!-->
+    </tr>
+    <tr></tr>
+    <tr>
+      <td>气</td>
+      <td>农民</td>
+      <td>116</td>
+      <td>1.93</td>
+      <!--td></td!-->
+    </tr>
+    <tr>
+      <td>高产气</td>
+      <td>农民</td>
+      <td>232</td>
+      <td>3.87</td>
+      <!--td>高产双倍</td!-->
+    </tr>
+
+  </tbody>
+</table>
+  </div>
+</div>
+
+<br>
+
+
+
+<div class="card">
+  <div class="card-header">
+太空资源采集速度&nbsp;-&nbsp;数据来自安达利尔
+  </div>
+  <div class="card-body">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">矿种</th>
+      <th scope="col">采集方式</th>
+      <th scope="col">每分产量</th>
+      <th scope="col">每秒产量</th> 
+      <!--th scope="col">说明</th!-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>矿</td>
+      <td>单农民</td>
+      <td>360</td>
+      <td>6</td>
+      <!--td></td!-->
+    </tr>
+    <tr>
+      <td>矿</td>
+      <td>双农民</td>
+      <td>720</td>
+      <td>12</td>
+      <!--td>和普通的一样</td!-->
+    </tr>
+    <tr>
+      <td colspan="4">每多一个农民+6，可以无限加（矿比较近农民乱跑效率很低）</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+      <td>气</td>
+      <td>自动</td>
+      <td>180</td>
+      <td>3</td>
+      <!--td>每次采15，每分钟21-22次</td!-->
+    </tr>
+
+  </tbody>
+</table>
+  </div>
+</div>
+<br><br>
+<div class="alert alert-primary" role="alert">
+  感谢 犹如黑白默片、就这样吧、颜色、突袭巡航舰、突袭无量舰 提供截图<br>
+  星球馈赠是1.5以后新增的特性，每个星球2个
+</div>
+
+  	<br><br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    冰霜
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/ice.jpg" class="img-fluid">
+	</div>
+
+<hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/icemap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+  <div class="col text-center">
+    <img src="img/gift/ice1.jpg" class="img-fluid">
+  </div>
+
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/ice2.jpg" class="img-fluid">
+  </div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ice1_info">查看冰霜之灵属性</button>
+</div>
+</div>
+
+
+
+  </div>
+</div><!--card end!-->
+
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    丛林
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/tree.jpg" class="img-fluid">
+	</div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/treemap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+
+  <div class="col text-center">
+    <img src="img/gift/tree1.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/tree2.jpg" class="img-fluid">
+  </div>
+</div>
+
+
+
+  </div>
+</div><!--card end!-->
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    海洋
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/sea.jpg" class="img-fluid">
+	</div>
+<hr>
+<br>
+
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/seamap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+  <div class="col text-center">
+    <img src="img/gift/sea1.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/sea2.jpg" class="img-fluid">
+  </div>
+
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sea1_info">查看远洋贸易</button>
+</div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sea2_info">查看太空城属性</button>
+</div>
+
+</div>
+
+  </div>
+</div><!--card end!-->
+
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    多山
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/hill.jpg" class="img-fluid">
+	</div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-lg-8">
+      <img src="img/star/hillmap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+
+  <div class="col text-center">
+    <img src="img/gift/hill1.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/hill2.jpg" class="img-fluid">
+  </div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hill1_info">查看战狼属性</button>
+</div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hill2_info">查看轨道导弹塔属性</button>
+</div>
+</div>
+
+
+
+  </div>
+</div><!--card end!-->
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    熔岩
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/fire.jpg" class="img-fluid">
+	</div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/firemap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+  <br>
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+    <div class="col text-center">
+    <img src="img/gift/fire1.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/fire2.jpg" class="img-fluid">
+  </div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fire2_info">查看熔岩结晶属性</button>
+</div>
+</div>
+
+  </div>
+</div><!--card end!-->
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    沼泽
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/bog.jpg" class="img-fluid">
+	</div>
+<hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/bogmap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+
+
+<div class="col text-center">
+  <img src="img/gift/bog1.jpg" class="img-fluid">
+</div>
+<br>
+<div class="col text-center">
+  <img src="img/gift/bog2.jpg" class="img-fluid">
+</div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bog1_info">查看幽魂“纳克斯”属性</button>
+</div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bog2_info">查看资源转换</button>
+</div>
+
+</div>
+
+
+  </div>
+</div><!--card end!-->
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    沙漠
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/sad.jpg" class="img-fluid">
+	</div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/sadmap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+
+  <div class="col text-center">
+    <img src="img/gift/sad1.jpg" class="img-fluid">
+  </div>
+  <br>
+  <div class="col text-center">
+    <img src="img/gift/sad2.jpg" class="img-fluid">
+  </div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sad1_info">查看沙漠之子属性</button>
+</div>
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sad2_info">查看智能天雷</button>
+</div>
+
+</div>
+
+  </div>
+</div><!--card end!-->
+
+
+  	<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    幽灵
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/star/ghost.jpg" class="img-fluid">
+	</div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/ghostmap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+
+
+<div class="alert alert-primary col-12" role="alert">
+<h2>馈赠</h2>
+
+  <div class="col text-center">
+    <img src="img/gift/ghost1.jpg" class="img-fluid">
+  </div>
+<br>
+
+  <div class="col text-center">
+    <img src="img/gift/ghost2.jpg" class="img-fluid">
+  </div>
+
+<br>
+<div class="col text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ghost1_info">查看行星发动机属性</button>
+</div>
+
+
+  </div>
+  </div>
+</div><!--card end!-->
+
+    <br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    盖亚
+  </div>
+  <div class="card-body">
+  <div class="row justify-content-md-center">
+    <div class="col text-center col-md-8 col-lg-4">
+      <img src="img/star/gaiyamap.jpg" class="img-fluid" style="width: 100%;">
+    </div>
+  </div>
+  </div>
+</div><!--card end!-->
+
+<br>
+</div>
+
+
+
+
+
+
+  <div class="tab-pane fade" id="level" role="tabpanel" aria-labelledby="level-tab">
+  <br>
+  <div class="alert alert-danger" role="alert">
+本图难度较大，建议新手先自己开一局，选择新手教程，走一下流程再尝试更高难度的游戏<br><br>
+  <div class="col text-center">
+    <img src="img/intro/intro1.jpg" class="img-fluid">
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    据作者本人说:
+      <div class="col text-center">
+    <img src="img/level/easy.jpg" class="img-fluid">
+  </div>
+  </div>
+</div>
+
+	
+  <br>
+
+<div class="card">
+  <div class="card-header">
+    <h4>虫群天灾</h4>
+  </div>
+    <div class="card-body">
+      <div class="col text-center">
+    <img src="img/level/level1.jpg" class="img-fluid">
+  </div>
+  <hr>
+        <div class="col text-center">
+    <img src="img/level/level2.jpg" class="img-fluid">
+  </div>
+  <hr>
+        <div class="col text-center">
+    <img src="img/level/level3.jpg" class="img-fluid">
+  </div>
+</div>
+
+  </div>
+
+
+
+  <br>
+
+<div class="card">
+  <div class="card-header">
+    <h4>净化协议</h4>
+  </div>
+      <div class="card-body">
+      <div class="col text-center">
+    <img src="img/level/level4.jpg" class="img-fluid">
+  </div>
+  <hr>
+        <div class="col text-center">
+    <img src="img/level/level5.jpg" class="img-fluid">
+  </div>
+  <hr>
+        <div class="col text-center">
+    <img src="img/level/level6.jpg" class="img-fluid">
+  </div>
+</div>
+  </div>
+
+<br>
+
+
+
+
+  </div>
+
+
+
+  <div class="tab-pane fade" id="source" role="tabpanel" aria-labelledby="source-tab">
+  	<br>
+    <div class="alert alert-primary" role="alert">
+玩家在选择难度和星球之后，可以选择起源来实现不同的游戏特性，玩家初始只能选择“割据势力”和“和平统一”两种起源，其他五种起源在通关一次普通难度之后可以选择，如果需要多种起源可以联系作者。
+</div>
+
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    割据势力：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/split.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    和平统一：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/peace.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    天外病毒：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/virus.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    失联殖民地：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/colony.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    星门：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/stargate.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    启示录：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/apoc.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+
+
+<br>
+<div class="card"><!--card start!-->
+  <div class="card-header">
+    生命之种：
+  </div>
+  <div class="card-body">
+	<div class="col text-center">
+		<img src="img/source/life.jpg" class="img-fluid">
+	</div>
+  </div>
+</div><!--card end!-->
+<br>
+  </div>
+
+
+
+
+
+
+
+  <div class="tab-pane fade" id="enemy" role="tabpanel" aria-labelledby="enemy-tab">
+    <br>
+    <h3>异虫单位</h3>
+    <hr>
+
+<div class="card">
+  <div class="card-header">
+    利维坦
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+        <img src="img/enemy/za1.jpg" class="img-fluid">
+    </div>
+    <br>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enemy_za">查看利维坦属性</button>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    虫巢保卫者
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+        <img src="img/enemy/zb1.jpg" class="img-fluid">
+    </div>
+    <br>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enemy_zb">查看虫巢保卫者属性</button>
+    </div>
+  </div>
+</div>
+<br>
+
+    <div class="card">
+  <div class="card-header">
+    吞噬者
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+        <img src="img/enemy/zc1.jpg" class="img-fluid">
+    </div>
+    <br>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enemy_zc">查看吞噬者属性</button>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+    <div class="card">
+  <div class="card-header">
+    守护者
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+        <img src="img/enemy/zd1.jpg" class="img-fluid">
+    </div>
+    <br>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enemy_zd">查看守护者属性</button>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+    <div class="card">
+  <div class="card-header">
+    异龙
+  </div>
+  <div class="card-body">
+      <div class="col text-center">
+        <img src="img/enemy/ze1.jpg" class="img-fluid">
+    </div>
+    <br>
+    <div class="col text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enemy_ze">查看异龙属性</button>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<br>
+    <h3>星灵单位</h3>
+    <hr>
+    暂无
+<br>
+<br><br>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="tab-pane fade" id="update" role="tabpanel" aria-labelledby="update-tab">
+    <br>
+
+
+
+
+
+
+<div class="card text-white bg-primary">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.76
+    </div>
+    <div class="col text-end">
+      2022年4月17日
+    </div>
+    </div>
+  </div>
+  <div class="card-body text-dark bg-light">
+-修复熔岩行星模型bug<br>
+-更换了大型星系恒星模型<br>
+-天灾模式下殖民船添加转让给队友的技能（目标必须为队友建筑<br>
+且无法对选择生命之种起源的队友释放）<br>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.66
+    </div>
+    <div class="col text-end">
+      2021年12月28日
+    </div>
+    </div>
+  </div>
+  <div class="card-body">
+-虫群天灾新手模式现在可以单人启动<br>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.65
+    </div>
+    <div class="col text-end">
+      2021年12月25日
+    </div>
+    </div>
+  </div>
+  <div class="card-body">
+星门<br>
+-舰船使用星门后将会获得30秒的时空同调效果，提升15%的时间流逝速度<br>
+其他<br>
+-主战坦克攻击建筑时不再具备溅射效果<br>
+-修复大量bug（包括幽灵星球内炮台过多引起的卡顿）<br>
+-修复部分文本错误<br>
+-虫族工蜂现在同赫克机甲一样免疫各种恶劣环境效果<br>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.64
+    </div>
+    <div class="col text-end">
+      2021年12月24日
+    </div>
+    </div>
+  </div>
+  <div class="card-body text-dark bg-light">
+-升级人类战舰和星际战机攻防将会影响对应单位的武器和装甲图标<br>
+-升级星际战机攻防条件从机场变更为太空星港或机场<br>
+-升级护盾技术将会让太空城拥有护盾<br>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.63
+    </div>
+    <div class="col text-end">
+      2021年12月20日
+    </div>
+    </div>
+  </div>
+  <div class="card-body">
+天外病毒<br>
+-降低了僵尸和猎杀体的生命值<br>
+-感染城市生命值削弱为800，低于75%/50%/20%时均会释放一波僵尸，被摧毁后释放的僵尸减少<br>
+-感染指挥中心生命值削弱为1500，添加扼喉怪的触手攻击技能，但一次只能控制一个单位<br>
+-感染指挥中心被摧毁后，上方监控体将会重新具备行动能力并同时向玩家发动攻击<br>
+-删除了扼喉怪<br>
+-修复感染指挥中心触手攻击视觉上射程过长的bug<br>
+失联殖民地<br>
+-殖民船卸载单位速度加快，同时无失联殖民地起源的殖民船卸载速度也加快了<br>
+其他<br>
+-虫群天灾模式下虫群主力舰队到来前30秒会提示到达位置<br>
+-太空中上出生点略微往上调整<br>
+-守护者空投囊内包含的虫群单位数量减少，同时花费资源，冷却降低<br>
+-守护者攻击行星射击速度降低<br>
+-空投囊和空降仓抵达时，生成部队阵型不再成一条线<br>
+-虫巢保卫者质粒喷涌攻击效果由定身更改为降低80%移动速度<br>
+-自动机炮攻击速度降低，射程提高<br>
+-升级微型导弹将会使反装甲步兵的对地重甲单位射程提高0.5<br>
+-修复bug<br>
+-清档和句柄指令只需要输入中文即可<br>
+  </div>
+</div>
+<br>
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+          <div class="col">
+       版本1.62
+    </div>
+    <div class="col text-end">
+      2021年12月15日
+    </div>
+    </div>
+  </div>
+  <div class="card-body">
+    -天灾模式天灾舰队来临出生点更加随机，比之前增加了6个<br>
+    -护卫舰增加后燃推进功能，期间无视非建筑碰撞<br>
+    -殖民星球技能会让资源附近的城市判定是否拥有资源接收站进行重建<br>
+    -熔岩结晶出现概率提高，调整了一处溶岩行星的地形<br>
+    -修复太空城无法修复的bug<br>
+    -雷神护甲提高1<br>
+    -幽魂被病毒感染会变异为猎杀体<br>
+    -修复一些文本错误<br>
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+       版本1.61
+    </div>
+    <div class="col text-end">
+      2021年12月11日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-感谢群友们的大力支持！
+  </div>
+
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+       版本1.60
+    </div>
+    <div class="col text-end">
+      2021年12月10日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-熔岩结晶强化效果伤害加成更改为添加额外的粒子武器<br>
+-添加粒子武器效果只对有武器的单位生效，行星轰炸舰和铁鸦同样生效<br>
+-沙漠二级馈赠更改效果为智能天雷，可建造能制导的天雷，并且进入太空后直接拥有高级智能技术<br>
+-所有残酷馈赠只需困难即可解锁
+  </div>
+  
+</div>
+<br>
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+       版本1.59
+    </div>
+    <div class="col text-end">
+      2021年12月9日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-熔岩结晶产生概率会逐渐增加：每次熔岩喷发若在地面上且未产生熔岩结晶则会增加概率，最迟6分钟左右（不计算上次产生熔岩结晶后的3分钟内）将会产生熔岩结晶<br>
+-熔岩结晶更改为可被任何玩家单位拾取，拾取后需手动激活，可以强化任意一个玩家或者盟友单位，也可以直接拆解获得500晶体和资源<br>
+-沼泽行星幽魂吸收瘴气会额外增加点生命值和能量，添加狮鹭号前往其他星球技能，拥有太空星港才可使用，升级星际跃迁后狮雪号（自身隐形）将直接传送到目标星球处<br>
+-拥有虫穴和主巢的星球将会尝试在星球外布置眼虫<br>
+-冰霜之灵在行星时代攻防升级三级后可直接击毁附近的轨道轰炸炮弹(如守护者炮弹)<br>
+-修复城市建造无法取消的bug<br>
+-击败利维坦后，新训练出的单位也能同样享受士气加成<br>
+-虫群天灾新手模式进攻节奏调整为和普通模式相同，但生命值和攻击速度均下降50%<br>
+-太空工程船速度下降<br>
+-修复虫群空投囊第三波主巢建立bug     
+  </div>
+  
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+       版本1.58
+    </div>
+    <div class="col text-end">
+      2021年12月6日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-虫群天灾模式下，第5波主力舰队以及利维坦到来后，若虫群舰队承受了大量伤害将会5分钟内隐藏所有没有人类势力的虫群行星上的大部分单位用来缓解卡顿，提升玩家交战时的游戏体验<br>
+-熔岩行星残酷馈赠更改   
+  </div>
+  
+</div>
+<br>
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+    </div>
+    <div class="col text-end">
+      2021年12月5日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-添加了虫群天灾新手模式，创建房间时可以选择，最少需要2人才能开启，最多3人<br>
+-沙漠恶蝠移除沙漠行星减速效果<br>
+  </div>
+  
+</div>
+<br>
+
+
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+    </div>
+    <div class="col text-end">
+      2021年12月3日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+虫群天灾<br>
+-第三波先遣舰队的异龙将会保护其中的守护者和吞噬者<br>
+-虫群空投单位（守护者空投的）不会同时存在超过100个<br>
+-添加了虫群舰队进攻路径显示<br>
+-困难难度和残酷难度主力舰队虫群战舰数量增加<br>
+-利维坦进入战场时爆蚊将会进行保护<br>
+-残酷难度虫群主力舰队将会直接加入利维坦，并且利维坦可以直接摧毁附近的空间壁垒和星球护盾<br>
+-利维坦星球同化视觉效果略微优化<br>
+-修复了熔岩星球被同化后模型异常的远古bug<br>
+-大幅优化星空碎裂炮的卡顿<br>
+-修复净化协议bug<br>
+-利维坦质粒喷涌和星球同化添加对附近的人类行星造成停顿的效果<br>
+-新手玩家进图时添加提示教程对话框<br>
+-削弱了利维坦对行星喷吐质粒喷涌的射程以及星球同化的射程<br>
+-利维坦对行星造成停顿的效果更改为残酷难度专属<br>
+-虫巢保卫者的质粒喷涌技能现在会自动对附近人类星球使用，并对星球内部造成轰炸效果<br>
+-虫巢保卫者初始护甲提高1，利维坦初始护甲提高2<br>
+-虫巢保卫者初始攻击提高2，虫群太空舰队攻防对质粒喷涌每级加成5点伤害<br>
+-修复虫巢保卫者普通攻击不计算护甲的bug<br>
+-修复星球同化后轨道卫星不移除的bug<br>
+-虫群建筑建造后感染树木范围降低2<br>
+  </div>
+  
+</div>
+<br>
+
+
+
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+     <div class="col">
+    </div>
+    <div class="col text-end">
+      2021年12月1日
+    </div>     
+    </div>
+  </div>
+
+  <div class="card-body">
+-取消了天灾模式的新手难度<br>
+-加入了新手教程，创建本图时选择新手教程模式即可进行体验<br>
+-瓦斯处理厂调整价格为75，全面扩张科技价格从100/100调整为100/50<br>
+-修复和平统一轨道导弹塔不涨价的bug<br>
+-多山星球空降点调整<br>
+-优化新手教程<br>
+-修复装甲防空车模型bug<br>
+  </div>
+  
+</div>
+<br>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--tab-content end!-->
+
+
+<div class="card"><!--card start!-->
+  <div class="card-body">
+<!-- 获取计数器网址 https://www.cutercounter.com/traditional-chinese-n/  !-->
+总计访问人数：<a href="https://www.mfwztj.com/" target="_blank"><img src="https://www.mfwztj.com/hit.php?id=zvxkdc&nd=6&style=4" border="0" alt="网站计数器"></a>
+  </div>
+</div><!--card end!-->
+
+</div><!---container!-->
+
+
+  <!-- pushy侧边栏菜单插件 !-->
+  <!--script src="https://cdn.bootcdn.net/ajax/libs/pushy/1.3.0/js/pushy.min.js"></script!-->
+   <script src="js/pushy.min.js"></script>
+
+  <script type="text/javascript">
+    //使用  https://github.com/Rob--W/cors-anywhere  作为代理服务器跨域请求数据
+    //请求  https://sc2arcade.com/api/maps/5/111423  的数据 
+
+  function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, options.url);
+    x.onload = x.onerror = function() {
+      printResult((x.responseText || ''));
+    };
+    x.send();
+  }
+
+
+//滚动回顶部的功能
+$(function () {        
+  $.scrollUp({
+      animation: 'fade',
+      scrollImg: { active: true, type: 'background', src: 'https://s3.ax1x.com/2020/11/21/DlyvqI.png' }
+  });
+  $('[data-toggle="popover"]').popover();
+
+
+      doCORSRequest({
+        method: 'GET',
+        url: 'https://api.sc2arcade.com/maps/5/111423/details?locale=zhCN'
+      }, function printResult(result) {
+        $("#div1").html(result);
+      });
+
+
+
+});
+
+//解决导航栏 fixed-top 后，锚点定位时遮挡问题 参见https://www.cnblogs.com/santiego/p/10361494.html
+function fix_the_nav() {
+    if(window.location.hash){
+            var target = $(location.hash);
+            $("body,html").scrollTop(target.offset().top-100); // my nav size is 100px
+    }
+}
+
+
+
+  </script>
+
+
+</body>
+
+</html>
+
